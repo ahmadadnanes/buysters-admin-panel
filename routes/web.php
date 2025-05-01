@@ -4,7 +4,7 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\UsersController::class , 'index'])
-    ->middleware('auth')
+    ->middleware('guest')
     ->name('home');
 
 Route::get('/login', [AuthController::class , 'create'])
